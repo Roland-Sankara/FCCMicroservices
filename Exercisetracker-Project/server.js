@@ -114,7 +114,7 @@ app.get('/api/users/:_id/logs',(req,res)=>{
 })
 
 // Database Connection
-let DB_URI = "mongodb+srv://FCC4:rolandDB21@fcc-data.rgopo.mongodb.net/ExerciseTracker?retryWrites=true&w=majority";
+let DB_URI = process.env.DB_URI;
 
 mongoose.connect(DB_URI)
 .then(response=>{
